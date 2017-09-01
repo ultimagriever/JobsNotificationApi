@@ -7,6 +7,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 require('./database/connect');
+const Token = require('./models/Token');
 
 const app = express();
 app.use(bodyParser.json());
@@ -17,6 +18,19 @@ const request = axios.create({
     'Content-Type': 'application/json',
     'Accept-Encoding': 'gzip, deflate',
     'Accept': 'application/json'
+  }
+});
+
+app.post('/notification/register', async (req, res) => {
+  const { token } = req.body;
+
+  try {
+    await Token.create({ token });
+
+    res.send({ success: true });
+  } catch (e) {
+    console.error(e);
+    res.status(500).send({ success: false });
   }
 });
 
