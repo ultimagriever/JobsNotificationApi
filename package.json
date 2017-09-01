@@ -1,0 +1,18 @@
+{
+  "name": "JobsNotificationApi",
+  "version": "1.0.0",
+  "description": "API to handle Jobs app notifications",
+  "main": "index.js",
+  "repository": "https://github.com/ultimagriever/JobsNotificationApi",
+  "author": "Pamela Argentino",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.9"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0"
+  }
+}
