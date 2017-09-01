@@ -17,5 +17,8 @@
   },
   "scripts": {
     "start": "node index.js"
+  },
+  "engine": {
+    "node": "8.1.3"
   }
 }
